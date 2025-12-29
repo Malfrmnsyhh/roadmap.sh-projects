@@ -1,0 +1,259 @@
+:root {
+    --bg-body: #ffffff;
+    --text-main: #2c3e50;
+    --text-sec: #7f8c8d;
+    --accent: #2c3e50;
+    --border-color: #e0e0e0;
+    --card-bg: #f8f9fa;
+    --link-color:#3498db;
+
+    --max-width: 1200px;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+body.dark-mode {
+    --bg-body: #121212;
+    --text-main: #ecf0f1;
+    --text-sec: #b0b3b8;
+    --border-color: #333333;
+    --card-bg: #1e1e1e;
+    --link-color: #5dade2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container h2 {
+    font-weight: 700;
+    font-weight: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.btnDarkMode {
+    border: none;
+    background-color: var(--accent);
+    color: var(--bg-body);
+    padding: 8px 11px;
+    border-radius: 6px;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.btnDarkMode:hover {
+    transform: scale(1.03);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-weight: 500;
+    color: var(--text-sec);
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--text-main);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: var(--text-sec);
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.info-grid {
+    max-width: var(--max-width);
+    margin: 0 auto 60px auto;
+    padding: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.grid-column {
+    padding: 30px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.grid-column:last-child {
+    border-bottom: none;
+}
+
+.grid-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.project-list li {
+    background-color: var(--card-bg);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.project-list li:hover {
+    border-color: var(--accent);
+    transform: translateX(5px);
+    background-color: var(--bg-body);
+}
+
+.card-item {
+    margin-bottom: 25px;
+}
+
+.card-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card-item p {
+    font-size: 0.9rem;
+    color: var(--text-sec);
+    margin-bottom: 10px;
+}
+
+.link-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--link-color);
+    display: inline-block;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+.edu-summary {
+    font-size: 0.95rem;
+    color: var(--text-sec);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.list-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.course-list, .course-list {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.course-list li, .course-list li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-sec);
+}
+
+@media (min-width: 900px) {
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-column {
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .grid-column:last-child {
+        border-right: none;
+    }
+}
