@@ -1,6 +1,6 @@
 Front-end Projects from Roadmap.sh
 
-url project https://roadmap.sh/projects/portfolio-website
+url project: https://roadmap.sh/projects/portfolio-website
 
 # Personal Portfolio Website 🚀
 
