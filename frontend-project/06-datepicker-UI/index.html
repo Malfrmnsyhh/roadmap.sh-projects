@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.js" defer></script>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+
+<body>
+    <div class="datepicker-container">
+        <input type="text" class="date-input" placeholder="Select Date">
+
+        <div class="datepicker" hidden>
+            <!-- datepicker-herader -->
+            <div class="datepicker-header">
+                <button class="prev">prev</button>
+
+                <div>
+                    <select class="month-input">
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                    <input type="number" class="year-input" value="2026">
+                </div>
+
+                <button class="next">next</button>
+            </div>
+            <!-- datepicker-herader -->
+            <!-- days -->
+            <div class="days">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+            </div>
+            <!-- days -->
+            <!-- dates -->
+            <div class="dates">
+                <button class="dsebled">1</button>
+                <button class="disabled">2</button>
+                <button class="disabled">3</button>
+                <button class="disabled">4</button>
+                <button class="disabled">5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>10</button>
+                <button>11</button>
+                <button>12</button>
+                <button>13</button>
+                <button>14</button>
+                <button class="today">15</button>
+                <button>16</button>
+                <button>17</button>
+                <button>18</button>
+                <button>19</button>
+                <button>20</button>
+                <button>21</button>
+                <button>22</button>
+                <button class="selected">23</button>
+                <button>24</button>
+                <button>25</button>
+                <button>26</button>
+                <button>27</button>
+                <button>28</button>
+                <button>29</button>
+                <button>30</button>
+            </div>
+            <!-- dates -->
+        
+            <!-- footer -->
+            <div class="datepicker-footer">
+                <button class="cancel">Cancel</button>
+                <button class="apply">Apply</button>
+            </div>
+            <!-- footer -->
+        </div>
+    </div>
+</body>
+
+</html>
