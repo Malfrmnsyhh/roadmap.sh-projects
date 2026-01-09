@@ -4,6 +4,8 @@ A responsive, accessible, and interactive profile setup form built with vanilla 
 
 **🖼️ PREVIEW**
 ![Project Preview](./accesible-form.png)
+<br>
+<br>
 **🖼️ EXAMPLE**
 ![Project Example](./accesible-form-example.png)
 
