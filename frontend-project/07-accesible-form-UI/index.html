@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesible Profile Form</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <button id="theme-toggle" 
+            class="theme-btn" 
+            aria-label="Toggle Dark Mode">
+        <i class="fa fa-moon"></i>
+    </button>
+
+    <div class="form-card">
+        <h2>Setup Profile</h2>
+        <p class="subtitle">Complete your information to get started</p>
+
+        <form id="form-card">
+            <div class="form-group">
+                <label for="fullname">Full name</label>
+                <input type="text" 
+                        id="fullname" 
+                        placeholder="What should we call you?" 
+                        required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" 
+                        id="email" 
+                        placeholder="example@gmail.com" 
+                        required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Enter password</label>
+                <div class="input-wrapper">
+                    <input type="password" 
+                            id="password" 
+                            placeholder="*********" 
+                            required>
+                    <button type="button" 
+                            class="toggle-password" 
+                            aria-label="Show password" 
+                            aria-controls="password">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm password</label>
+                <div class="input-wrapper">
+                    <input type="password" 
+                            id="confirm-password" 
+                            placeholder="*********" r
+                            equired>
+                    <button type="button" 
+                            class="toggle-password" 
+                            aria-label="Show password"
+                            aria-controls="confirm-password">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+
+                <span id="password-error" class="error-msg" hidden>Password do not match</span>
+            </div>
+
+            <button class="submit-btn" type="submit">Update profile</button>
+        </form>
+
+        <div class="progres-section">
+            <div class="progress-header">
+                <span>Profile completeness</span>
+                <span id="progress-text">0%</span>
+            </div>
+            <div class="progess-bar-bg">
+                <div class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+
+            <ul class="checklist" aria-label="Form requirements">
+                <li id="req-name" class="pending">Enter full name</li>
+                <li id="req-email" class="pending">Enter valid email</li>
+            
+                <li id="req-length" class="pending">Minumum 6 charackters</li>
+                <li id="req-mix" class="pending">Combination of letters and numbers</li>
+            
+                <li id="req-match" class="pending">Password match</li>
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
