@@ -2,10 +2,16 @@
 
 A responsive, accessible, and interactive profile setup form built with vanilla HTML, CSS, and JavaScript. This project focuses on Web Accessibility Guidelines (WCAG), real-time validation logic, and modern UI design with Dark Mode support.
 
-**🖼️ PREVIEW**
-![Project Preview](./accesible-form.png)
-**🖼️ EXAMPLE**
-![Project Example](./accesible-form-example.png)
+
+<p align="center">
+  <b>🖼️ PREVIEW</b><br>
+  <img src="./accesible-form.png" width="60%" alt="Preview">
+</p>
+
+<p align="center">
+  <b>🖼️ EXAMPLE</b><br>
+  <img src="./accesible-form-example.png" width="60%" alt="Example">
+</p>
 
 ## 🚀 Features
 
