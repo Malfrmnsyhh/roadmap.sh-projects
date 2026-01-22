@@ -14,11 +14,8 @@ The primary goal of this project is to demonstrate proficiency in **CSS Grid Lay
 
 * **HTML5:** Semantic markup structure.
 * **CSS3:** CSS Grid, Flexbox, and Media Queries for responsiveness.
-
-## 🚀 How to Run
-
-1.  Clone this repository or download the source code.
-2.  Open the `index.html` file in any modern web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari).
-
 ---
 *Developed for frontend development practice.*
+
+## 🚀 Link Project
+* **URL**: https://roadmap.sh/projects/image-grid
