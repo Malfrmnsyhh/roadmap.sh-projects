@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.grid-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px; 
+    gap: 24px;
+    border-radius: 10px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+.item-1 {
+    grid-column: 1;
+    grid-row: span 2; 
+}
+
+.item-2 {
+    grid-column: 2;
+    grid-row: span 1;
+}
+
+.item-3 {
+    grid-column: 3;
+    grid-row: span 2;
+}
+
+.item-4 {
+    grid-column: 2;
+    grid-row: span 2;
+}
+
+.item-5 {
+    grid-column: 1;
+    grid-row: span 1;
+}
+
+.item-6 {
+    grid-column: 3;
+    grid-row: span 1;
+}
+
+.tooltip-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    
+    /* Membuat background gradasi hitam transparan agar teks putih terbaca */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    
+    /* Keadaan Awal: Tersembunyi */
+    opacity: 0;
+    transform: translateY(20px); /* Turun sedikit ke bawah */
+    transition: all 0.3s ease-in-out; /* Animasi halus */
+    pointer-events: none; /* Agar mouse tidak 'tersangkut' di teks */
+}
+
+/* 3. Styling Teks di dalam Tooltip */
+.tooltip-overlay h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.tooltip-overlay p {
+    font-size: 0.85rem;
+    opacity: 0.9; /* Sedikit lebih transparan */
+}
+
+/* 4. MAGIC HAPPENS HERE: Saat Grid Item di-Hover */
+.grid-item:hover .tooltip-overlay {
+    opacity: 1; /* Muncul */
+    transform: translateY(0); /* Kembali ke posisi asal */
+}
+
+@media (max-width: 900px) {
+    .grid-img {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+    }
+
+    .grid-item {
+        grid-column: auto;
+        grid-row: span 1;
+    }
+    
+    .item-1, .item-4 {
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-img {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px; 
+    }
+
+    .grid-item {
+        grid-column: auto !important;
+        grid-row: span 1 !important;
+    }
+}
